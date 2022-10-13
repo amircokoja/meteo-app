@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon {
+  height: 20px;
+}
+
+.city {
+  flex: 1;
+  font-size: 15px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex: 1;
+
+  h3 {
+    font-size: 36px;
+  }
+
+  img {
+    margin-bottom: 50px;
+    width: 250px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}

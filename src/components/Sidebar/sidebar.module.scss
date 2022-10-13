@@ -1,0 +1,152 @@
+.sidebar-container {
+  display: flex;
+  overflow: hidden;
+
+  .sidebar {
+    width: 300px;
+    padding: 40px;
+    height: 100vh;
+    background: rgb(249, 249, 249);
+    border-right: 1px solid rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: fixed;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        margin: 0;
+      }
+
+      img {
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+
+    .group {
+      h4 {
+        margin-bottom: 15px;
+      }
+    }
+
+    .sort {
+      text-transform: uppercase;
+      color: gray;
+      font-size: 14px;
+    }
+
+    .item {
+      height: 50px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      .delete {
+        height: 10px;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .name {
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        background-color: rgb(224, 237, 255);
+        color: rgb(48, 108, 192);
+      }
+
+      svg {
+        height: 27px;
+      }
+    }
+
+    h4 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  .sidebar-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 340px;
+    min-height: 100vh;
+    background-color: white;
+  }
+
+  .no-data {
+    text-align: center;
+
+    img {
+      width: 60px;
+    }
+  }
+
+  .header {
+    margin-bottom: 30px;
+    display: flex;
+    img {
+      cursor: pointer;
+      margin-right: 20px;
+      height: 40px;
+    }
+  }
+
+  .menuicon {
+    display: none;
+  }
+}
+
+.sidebar-container.hide {
+  .sidebar {
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .sidebar-content {
+    background-color: white;
+    position: relative;
+    padding-left: 40px;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sidebar-container {
+    .sidebar {
+      width: 100vw;
+    }
+
+    .sidebar-content {
+      padding-left: calc(100vw + 40px);
+      overflow: hidden;
+      overflow-x: hidden !important;
+      width: 0 !important;
+    }
+  }
+
+  .menuicon {
+    display: block !important;
+  }
+}

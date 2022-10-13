@@ -1,0 +1,33 @@
+.variables {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.chart {
+  width: 100%;
+  height: 500px;
+}
+
+.empty {
+  text-align: center;
+  img {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .variables {
+    flex-direction: column;
+  }
+}
